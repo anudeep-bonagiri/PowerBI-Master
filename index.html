@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Power BI Master Assistant</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #f1f1f1;
+            padding: 30px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #e50914;
+        }
+
+        #query-input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: 1px solid #e50914;
+            border-radius: 8px;
+            background-color: #1e1e1e;
+            color: #fff;
+        }
+
+        button {
+            padding: 10px 18px;
+            font-size: 16px;
+            margin: 5px 4px;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            background-color: #e50914;
+            color: #fff;
+            transition: all 0.2s ease;
+        }
+
+        button:hover {
+            background-color: transparent;
+            color: #e50914;
+            border: 2px solid #e50914;
+        }
+
+        #response {
+            margin-top: 25px;
+            background: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(229, 9, 20, 0.3);
+        }
+
+        #response-text {
+            white-space: pre-wrap;
+            color: #e0e0e0;
+        }
+
+        .chat-history {
+            margin-top: 25px;
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-radius: 10px;
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #333;
+        }
+
+        .chat-item {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-question, .chat-response {
+            padding: 12px 15px;
+            border-radius: 15px;
+            max-width: 80%;
+            line-height: 1.4;
+            font-size: 15px;
+            word-wrap: break-word;
+        }
+
+        .chat-question {
+            background-color: #e50914;
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 0;
+        }
+
+        .chat-response {
+            background-color: #2a2a2a;
+            color: #e0e0e0;
+            align-self: flex-start;
+            border-bottom-left-radius: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>🧠 Power BI Master Assistant</h2>
+
+    <input type="text" id="query-input" placeholder="Ask me anything about Power BI (e.g., how do I calculate profit margin?)">
+    <br>
+    <button id="ask-btn">Ask</button>
+    <button id="speak-btn">🔊 Speak</button>
+    <button id="save-btn">💾 Save Chat</button>
+    <button id="clear-btn">🗑️ Clear Chat</button>
+
+    <div id="chat-history" class="chat-history"></div>
+
+    <div id="response" style="display: none;">
+        <h3 style="color: #e50914;">Response:</h3>
+        <div id="response-text"></div>
+    </div>
+
+    <script src="powerbi-assistant.js"></script>
+</body>
+</html>
