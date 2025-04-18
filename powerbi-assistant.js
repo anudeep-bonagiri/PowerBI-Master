@@ -1,5 +1,5 @@
 // Add your Gemini API key here
-const GEMINI_API_KEY = 'AIzaSyDPxBi3BuBSxfnPAOzYDPKAMl-pyElle4E';
+const GEMINI_API_KEY = 'Enter Your Own API Key Here';
 
 document.addEventListener('DOMContentLoaded', () => {
     const inputField = document.getElementById('query-input');
