@@ -3,3 +3,12 @@
 /context.txt
 /images
 /js
+
+# Secrets: never commit real env files or keys
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+.secrets/
